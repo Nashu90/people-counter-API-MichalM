@@ -14,7 +14,7 @@ class HelloWorld2(Resource):
         return {'hello': 'world2'}
 
 
-api.add_resource(HelloWorld, '/test')
+api.add_resource(HelloWorld,'/test')
 api.add_resource(HelloWorld, '/test2')
 
 if __name__ == '__main__':

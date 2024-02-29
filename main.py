@@ -2,8 +2,8 @@ from flask import Flask
 from flask_restful import Resource, Api
 from flask import request
 import cv2
-import numpy as np # dodane
-from urllib.request import urlopen # dodane
+import numpy as np # zadanie
+from urllib.request import urlopen # zadanie
 
 app = Flask(__name__)
 api = Api(app)
@@ -11,13 +11,13 @@ api = Api(app)
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
-class HelloWorld(Resource):
-    def get(self):
-        return {'hello': 'world'}
+#class HelloWorld(Resource):
+#    def get(self):
+#        return {'hello': 'world'}
 
-class HelloWorld2(Resource):
-    def get(self, id):
-        return {'hello': id}
+#class HelloWorld2(Resource):
+#    def get(self, id):
+#        return {'hello': id}
 
 class PeopleCounter(Resource):
     def get(self):
